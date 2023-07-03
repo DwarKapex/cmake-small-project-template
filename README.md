@@ -14,7 +14,7 @@ $> cd <path/to/folder/>
 $> git clone https://github.com/DwarKapex/cmake-small-project-template.git
 ```
 
-2. Build documentation using (docker)[https://docs.docker.com/]:
+2. Build documentation using [docker](https://docs.docker.com/):
 
 ```bash
 $> cd <path/to/folder/>/cmake-small-project-template

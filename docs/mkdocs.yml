@@ -1,0 +1,31 @@
+site_name: CMake Small Project Template
+# all links point to html files; needed for local-file and remote server browsing
+use_directory_urls: false
+nav:
+ - Home: index.md
+ - Library:
+   - library/HelloWorld.md
+   - library/Filesystem.md
+   - library/Tools.md
+ - Apps:
+   - apps/HelloWorld.md
+ - CMake:
+   - cmake/general.md
+ - Tools:
+   - CI: tools/ci.md
+ - Doxygen: 
+   - doxygen/doxygen.md
+ - References: reference.md
+
+markdown_extensions:
+ - admonition
+ - sane_lists
+ - tables
+
+theme:
+  name: readthedocs
+
+extra_css:
+  - extra.css
+
+dev_addr: '0.0.0.0:8080'

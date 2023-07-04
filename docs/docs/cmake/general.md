@@ -41,17 +41,31 @@ Another available option for the project generations is a usage of [ccache](http
 ```bash
 $> cmake ../cmake-small-project-template -D ENABLE_CCACHE:Bool=YES -D BUILD_DOCS:Bool=YES -D UNIT_TEST_FRAMEWORK:String=GTEST -D ENABLE_TESTING:Bool=YES
 ```
-3. And finally build the project fully:
+
+3. And finally build the project completely:
 
 ```bash
-$> $> cmake --build .
+$> cmake --build .
 ```
 
 ## Run
 
-As an example you can run all unit-test:
+As an example you can run 
+
+* all unit-test:
 
 ```bash
 $> ctest
 ```
 
+* single test:
+
+```bash
+$> ctest -R test_libFilesystem
+```
+
+ * `HelloWorld` app:
+
+```bash
+$> ./apps/HelloWorld/AppHelloWorld
+```

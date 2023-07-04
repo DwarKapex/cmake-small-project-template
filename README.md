@@ -2,8 +2,8 @@
 
 Welcome to CMake Small Project Template
 
-This is my personal vision of how small C++ project should be organized 
-for better readability and easy-to-maintain.
+This is my personal vision of how a small C++ project should be organized 
+(in terms of using CMake) for better readability and easy-to-maintain.
 
 The full documentation can be build as follows:
 

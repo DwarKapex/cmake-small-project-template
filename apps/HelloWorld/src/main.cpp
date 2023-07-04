@@ -3,6 +3,6 @@
 #include <iostream>
 
 int main() {
-    std::cout << HelloWorld::HelloWorld(10) << std::endl;
+    std::cout << "Hello World # " << HelloWorld::HelloWorld(10) << std::endl;
     return 0;
 }

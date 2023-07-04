@@ -31,7 +31,7 @@ set(UNIT_TEST_FRAMEWORK GTEST CACHE STRING "Test engine to work with. Only BOOST
 # variants for cmake-ui
 set_property(CACHE UNIT_TEST_FRAMEWORK PROPERTY STRINGS GTEST BOOST)
 # enable CCACHE
-option(ENABLE_CCACHE "Enable CCACHE for building" ON)
+option(ENABLE_CCACHE "Enable CCACHE for building" NO)
 
 # Set cmake module path: path where to search for other *.cmake files
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
@@ -68,8 +68,10 @@ if (BUILD_DOCS)
 endif()
 
 # use ccache to speed up the compilation
-if (.)
+if (ENABLE_CCACHE)
     include(enable-ccache)
+else()
+    message(STATUS "Ccache is disabled")
 endif()
 
 # The libraries code is here
@@ -77,8 +79,3 @@ add_subdirectory(library)
 
 # Apps for testing or any other purposes are here
 add_subdirectory(apps)
-
-message("List of all targets")
-foreach(t IN LISTS BUILDSYSTEM_TARGETS)
-    message(" ${t}")
-endforeach()

@@ -1,4 +1,4 @@
-# add directory that contains description of Filesystem and MemoryFilesystem
+# add directory that contains definition of Filesystem and MemoryFilesystem
 add_subdirectory(Filesystem)
 
 # add some tools for anything

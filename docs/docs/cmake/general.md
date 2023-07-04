@@ -13,14 +13,14 @@ $> cmake --build .
 
 Detailed explanation:
 
-1. Navigate to the folder you cloned the repo and create *build* folder.
+1. Navigate to the folder you cloned the repo to and create *build* folder.
 
 ```bash
 $> cd </path/to/folder>
 $> mkdir build
 ```
 
-It is a general recommendation to keep *build* folder apart from the folder with source files to avoid mess them up. But it's totally up to you and you can create it inside repo folder or any other place (don't forget to update path to the source folder for commands below)
+It is a general recommendation to keep *build* folder apart from the folder with source files to avoid mess them up. But it's totally up to you and you can create it inside repo folder or any other place (don't forget to update path to the source folder for commands below accordingly)
 
 2. Generate the project:
 

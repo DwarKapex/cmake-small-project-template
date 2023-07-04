@@ -1,1 +1,3 @@
-Explains how CI/CD works here
+# CI/CD
+
+Explains how CI/CD works here.

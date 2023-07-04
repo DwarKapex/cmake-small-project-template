@@ -10,7 +10,7 @@ namespace tools {
  */
 template <int N>
 struct Factorial {
-  static_assert(N > 0 && "Factorial of negative value is unknown");
+  static_assert(N >= 0 && "Factorial of negative value is unknown");
   static constexpr uint32_t value = N * Factorial<N - 1>::value;
 };
 

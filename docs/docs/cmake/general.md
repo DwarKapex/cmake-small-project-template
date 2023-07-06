@@ -1,7 +1,7 @@
 # Build and run
 ## Build
 
-Run these simple commands to build and test the example:
+To build and run the example, follow these simple commands:
 
 ```bash
 $> cd </path/to/folder>
@@ -20,7 +20,8 @@ $> cd </path/to/folder>
 $> mkdir build
 ```
 
-It is a general recommendation to keep *build* folder apart from the folder with source files to avoid mess them up. But it's totally up to you and you can create it inside repo folder or any other place (don't forget to update path to the source folder for commands below accordingly)
+It is generally recommended to keep the build folder separate from the folder with the source files to avoid accidentally mixing them up. However, you can also create the build folder inside the repository folder or anywhere else. Just make sure to update the path to the source folder in the commands below accordingly.
+
 
 2. Generate the project:
 
@@ -28,7 +29,7 @@ It is a general recommendation to keep *build* folder apart from the folder with
 $> cmake ../cmake-small-project-template -D BUILD_DOCS:Bool=YES -D UNIT_TEST_FRAMEWORK:String=GTEST -D ENABLE_TESTING:Bool=YES
 ```
 
-This command generates the CMake project using standard Unix makefiles. If you'd like to generate the project for your favorite IDE, check first that it is supported by your CMake by using the following command:
+This command generates the CMake project using standard Unix makefiles. If you would like to generate the project for your favorite IDE, first check that it is supported by your CMake by running the following command:
 
 ```bash
 $> cmake -G
@@ -36,13 +37,13 @@ $> cmake -G
 
 It lists all available generators for installed CMake.
 
-Another available option for the project generations is a usage of [ccache](https://ccache.dev/). If you have it installed, do not hesitate to activate it with flag `ENABLE_CCACHE`:
+Another available option for the project generations is to use [ccache](https://ccache.dev/). You can activate it with the `ENABLE_CCACHE` flag:
 
 ```bash
 $> cmake ../cmake-small-project-template -D ENABLE_CCACHE:Bool=YES -D BUILD_DOCS:Bool=YES -D UNIT_TEST_FRAMEWORK:String=GTEST -D ENABLE_TESTING:Bool=YES
 ```
 
-3. And finally build the project completely:
+3. Finally, build the project completely:
 
 ```bash
 $> cmake --build .
@@ -50,21 +51,21 @@ $> cmake --build .
 
 ## Run
 
-As an example you can run 
+Once the project is built, you can run the following commands to run the unit tests, a single test, or the HelloWorld app:
 
-* all unit-test:
+* Run all unit-test:
 
 ```bash
 $> ctest
 ```
 
-* single test:
+* Run single test:
 
 ```bash
 $> ctest -R test_libFilesystem
 ```
 
- * `HelloWorld` app:
+ * Run the `HelloWorld` app:
 
 ```bash
 $> ./apps/HelloWorld/AppHelloWorld

@@ -1,6 +1,7 @@
 # Concepts
 
-Let's start with a folder structure. I want to keep it as simple as possible:
+The project uses a simple folder structure, with the following folders:
+
 
 ```bash
 - 3rd-party

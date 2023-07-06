@@ -1,5 +1,5 @@
 site_name: CMake Small Project Template
-# all links point to html files; needed for local-file and remote server browsing
+
 use_directory_urls: false
 nav:
  - Home: index.md
@@ -11,6 +11,7 @@ nav:
    - apps/HelloWorld.md
  - CMake:
    - cmake/general.md
+   - cmake/concepts.md
  - Tools:
    - CI: tools/ci.md
  - Doxygen: 

@@ -1,6 +1,7 @@
 function(add_project_library)
 	set(prefix	project_library_args)
-	set(optionArgs STATIC SHARED)
+	set(all_lib_types STATIC SHARED)
+	set(optionArgs ${all_lib_types})
     set(singleValuesArgs NAME)
     set(multiValueArgs PUBLIC PRIVATE)
 
@@ -26,8 +27,20 @@ function(add_project_library)
 		return()
 	endif()
 
+	set(lib_type "")
+	foreach(type IN LISTS all_lib_types)
+		if (${prefix}_${type})
+			if (NOT ${lib_type} STREQUAL "")
+				message(FATAL_ERROR "You cannot specify more than one library type [issue is with target ${lib_name}]")
+			endif()
+			set(lib_type ${type})
+		endif()
+	endforeach()
+	if (lib_type STREQUAL "") 
+		set(lib_type STATIC)
+	endif()
 	add_library(${lib_name}
-		STATIC
+		${lib_type}
 		${${lib_name}_SOURCE}
 	)
 

@@ -13,6 +13,19 @@ The project uses a simple folder structure, with the following folders:
 
 The names of each folder is self explained, but let me add some words here. 
 
+
+## 3rd-party
+
+Collection of useful libraries, binaries and etc. that can be used in the project. One of them is `googletest`
+
+## Cmake
+
+Set of CMake functions used in this project
+
+## Docs
+
+Documentation of the project based on [mkdocs](https://www.mkdocs.org/user-guide/installation/)
+
 ## Library
 
 The libraries (static or shared) are stored in folder `library`,
@@ -98,3 +111,19 @@ add_project_test()
 ```
 
 The command above creates a target with name `test_libHelloWorld` and ready to be executed thru `ctest`.
+
+## Apps
+
+An application has a the same folder structure as a library. To create an app use the following `CMakeLists.txt`:
+
+```bash
+# apps/HelloWorld/CMakeLists.txt
+add_and_install_project_app(AppHelloWorld
+    DEPEND
+        libHelloWorld
+)
+
+add_subdirectory(test)
+```
+
+The function `add_and_install_project_app()` accepts the name of the app binary as the first parameter and dependency list as the second one. 
